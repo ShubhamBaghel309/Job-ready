@@ -1,6 +1,6 @@
 import streamlit as st
 from langchain_groq import ChatGroq
-from langchain.document_loaders import WebBaseLoader
+from langchain_community.document_loaders import WebBaseLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from bs4 import BeautifulSoup
 import requests
@@ -29,12 +29,11 @@ class ResumeTailor:
             raise ValueError("GROQ_API_KEY not found in environment variables")
             
         self.llm = ChatGroq(
-            model="llama-3.1-8b-instant",
-            groq_api_key=GROQ_API_KEY,
+            model_name="llama-3.1-8b-instant",
+            api_key=GROQ_API_KEY,
             temperature=0,
             max_tokens=None,
-            timeout=None,
-            max_retries=2
+            timeout=None
         )
         self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
         
