@@ -291,10 +291,7 @@ RESUMETAILOR uses the following APIs:
 
 ```
 RESUMETAILOR/
-├── main.py                 # Main application entry point
-├── main2.py                # Secondary application implementation
-├── main3.py                # Minimal implementation for testing
-├── main4.py                # Enhanced UI implementation
+├── main.py                 # Enhanced UI implementation
 ├── latex_generator.py      # LaTeX resume generation functionality
 ├── latex_app.py            # LaTeX-specific UI
 ├── resume_form.py          # Form handling for resume creation
